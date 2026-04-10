@@ -1,3 +1,204 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Intelligence Layer | Enterprise Video Demos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "primary": "#adc6ff",
+                        "background": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-container": "#2a73e1",
+                        "tertiary": "#c8c6c5",
+                        "on-primary-fixed": "#001a41",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-on-surface": "#313030",
+                        "inverse-primary": "#005ac1",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "outline": "#8b909f",
+                        "surface-container-highest": "#353534",
+                        "on-surface-variant": "#c1c6d6",
+                        "secondary": "#deb7ff",
+                        "on-primary": "#002e69"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline":,
+                        "body":,
+                        "label":
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .aura-bg {
+            background: linear-gradient(45deg, rgba(173, 198, 255, 0.1) 0%, rgba(222, 183, 255, 0.1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary relative">
+
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w- rounded-2xl bg-surface/70 backdrop-blur-3xl shadow- flex justify-between items-center px-8 py-4 z-50 transition-all duration-300 hover:bg-white/5">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">The Intelligence Layer</a>
+    <div class="hidden md:flex space-x-8">
+        <a class="text-white font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text- hover:text-white transition-colors" href="#healthcare">Healthcare</a>
+        <a class="text- hover:text-white transition-colors" href="#financial">Financial Services</a>
+        <a class="text- hover:text-white transition-colors" href="#retail">Retail</a>
+        <a class="text- hover:text-white transition-colors" href="#marketing">Marketing</a>
+    </div>
+    <button onclick="openModal()" class="bg-primary text-on-primary font-medium px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 inline-block text-center cursor-pointer">Request Demo</button>
+</nav>
+
+<main class="relative pt-32 pb-24 overflow-hidden">
+    <section class="relative z-10 px-8 max-w-7xl mx-auto mb-32 flex flex-col items-start aura-bg py-20 rounded-">
+        <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4">Gemini Enterprise Showcase</span>
+        <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl">
+            Gemini Enterprise Demos
+        </h1>
+        <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+            Gemini Enterprise is your new front door for AI in the workplace. As an advanced agentic platform, it brings the best of Google AI to every employee. This central hub provides demonstrations of how you can securely connect to your company data and put a taskforce of AI agents to work, automating complex workflows across any industry.
+        </p>
+    </section>
+
+    <div class="space-y-32 px-8 max-w-7xl mx-auto">
+        
+        <section class="scroll-mt-32" id="healthcare">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="material-symbols-outlined text-primary text-4xl" data-icon="medical_services">medical_services</span>
+                <h2 class="text-4xl font-bold text-white tracking-tight">Healthcare</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 group">
+                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
+                            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Predictive Patient Care</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Discover how our AI layers integrate with electronic health records to predict patient deterioration up to 48 hours in advance. This demo showcases the seamless interface between raw data and clinical action.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-1">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                            <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
+                        <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-mt-32" id="financial">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="material-symbols-outlined text-secondary text-4xl" data-icon="account_balance">account_balance</span>
+                <h2 class="text-4xl font-bold text-white tracking-tight">Financial Services</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 lg:order-1 order-2">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                            <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
+                        <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 lg:order-2 order-1 group">
+                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
+                            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Autonomous Risk Synthesis</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Watch how our engine processes millions of global market indicators in real-time. We demonstrate the move from static reporting to dynamic, proactive risk landscape modeling for tier-one institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-mt-32" id="retail">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="material-symbols-outlined text-primary text-4xl" data-icon="shopping_bag">shopping_bag</span>
+                <h2 class="text-4xl font-bold text-white tracking-tight">Retail</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 group">
+                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
+                            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Hyper-Personalized Logistics</h3>
+                        <p class="text-on-surface-variant leading-relaxed">See the future of the supply chain. This demonstration tracks a single SKU from manufacturer to doorstep, optimized by our proprietary demand forecasting intelligence.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-1">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                            <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
+                        <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-mt-32" id="marketing">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="material-symbols-outlined text-secondary text-4xl" data-icon="campaign">campaign</span>
+                <h2 class="text-4xl font-bold text-white tracking-tight">Marketing</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                            <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
+                        <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 group">
+                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
+                            <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Generative Audience Orchestration</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Our AI doesn't just find audiences—it builds them. This demo explores how automated content synthesis creates unique narratives for micro-segments at infinite scale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
 <footer class="bg- full-width py-12 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
@@ -5,9 +206,9 @@
             <p class="text- text-sm">© 2024 The Intelligence Layer. All rights reserved.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-8 text-sm">
-            <a class="text- hover:text-white transition-colors" href="#">Privacy Policy</a>
-            <a class="text- hover:text-white transition-colors" href="#">Terms of Service</a>
-            <a class="text- hover:text-white transition-colors" href="#">Contact Support</a>
+            <a class="text- hover:text- transition-colors" href="#">Privacy Policy</a>
+            <a class="text- hover:text- transition-colors" href="#">Terms of Service</a>
+            <a class="text- hover:text- transition-colors" href="#">Contact Support</a>
         </div>
     </div>
 </footer>
