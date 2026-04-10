@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>The Intelligence Layer | Gemini Enterprise Video Demos</title>
+    <title>The Intelligence Layer | Enterprise Video Demos</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -36,12 +36,18 @@
                         "DEFAULT": "0.125rem",
                         "lg": "0.25rem",
                         "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "2xl": "1.0rem",
+                        "3xl": "1.5rem",
+                        "4xl": "2rem",
+                        "full": "9999px"
                     },
                     "fontFamily": {
-                        "headline":,
-                        "body":,
-                        "label":
+                        "headline": ['Manrope', 'sans-serif'],
+                        "body": ['Inter', 'sans-serif'],
+                        "label": ['Inter', 'sans-serif']
+                    },
+                    "boxShadow": {
+                        "card": "0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 10px 20px -5px rgba(0, 0, 0, 0.3)"
                     }
                 },
             },
@@ -59,28 +65,49 @@
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary relative">
 
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w- rounded-2xl bg-surface/70 backdrop-blur-3xl shadow- flex justify-between items-center px-8 py-4 z-50 transition-all duration-300 hover:bg-white/5">
-    <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">The Intelligence Layer</a>
-    <div class="hidden md:flex space-x-8">
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] md:w-[70%] max-w-7xl rounded-full bg-surface/70 backdrop-blur-3xl shadow-xl flex justify-between items-center px-12 py-5 z-50 transition-all duration-300 hover:bg-white/5 border border-white/5">
+    <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors mr-20">The Intelligence Layer</a> <!-- Added margin here -->
+    <div class="hidden md:flex space-x-10">
         <a class="text-white font-medium hover:text-primary transition-colors" href="index.html">Home</a>
-        <a class="text- hover:text-white transition-colors" href="#healthcare">Healthcare</a>
-        <a class="text- hover:text-white transition-colors" href="#financial">Financial Services</a>
-        <a class="text- hover:text-white transition-colors" href="#retail">Retail</a>
-        <a class="text- hover:text-white transition-colors" href="#marketing">Marketing</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors" href="#healthcare">Healthcare</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors" href="#financial">Financial Services</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors" href="#retail">Retail</a>
+        <a class="text-on-surface-variant hover:text-white transition-colors" href="#marketing">Marketing</a>
     </div>
-    <button onclick="openModal()" class="bg-primary text-on-primary font-medium px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 inline-block text-center cursor-pointer">Request Demo</button>
+    <button onclick="openModal()" class="bg-primary text-on-primary font-semibold px-7 py-2.5 rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 inline-block text-center cursor-pointer">Request Demo</button>
 </nav>
 
-<main class="relative pt-32 pb-24 overflow-hidden">
-    <section class="relative z-10 px-8 max-w-7xl mx-auto mb-32 flex flex-col items-start aura-bg py-20 rounded-">
-        <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4">Gemini Enterprise Showcase</span>
-        <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl">
-            Gemini Enterprise Demos
-        </h1>
-        <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-            Gemini Enterprise is your new front door for AI in the workplace. As an advanced agentic platform, it brings the best of Google AI to every employee. This central hub provides demonstrations of how you can securely connect to your company data and put a taskforce of AI agents to work, automating complex workflows across any industry.
-        </p>
-    </section>
+<main class="relative pt-40 pb-24 overflow-hidden">
+    
+    <!-- Gemini Enterprise Showcase Section - Updated with rounding and layered effects -->
+    <div class="relative max-w-7xl mx-auto mb-32 group aura-bg p-8 rounded-4xl"> <!-- Wrapping div with refined aura and rounding -->
+            
+        <!-- Text Content Card (Main Card) - Re-styled existing content inside -->
+        <section class="relative z-20 px-16 py-20 rounded-3xl bg-surface-container-high/60 backdrop-blur-2xl shadow-card flex flex-col items-start border border-white/5 outline outline-1 outline-white/10">
+            <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4">Gemini Enterprise Showcase</span>
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl">
+                Gemini Enterprise Demos
+            </h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Gemini Enterprise is your new front door for AI in the workplace. As an advanced agentic platform, it brings the best of Google AI to every employee. This central hub provides demonstrations of how you can securely connect to your company data and put a taskforce of AI agents to work, automating complex workflows across any industry.
+            </p>
+        </section>
+        
+        <!-- Add a deep layered card behind (offset) -->
+        <div class="absolute inset-0 bg-surface-container-high/40 rounded-3xl -translate-x-12 -translate-y-8 w-[80%] h-[80%] scale-95 opacity-60 blur-lg transition-transform duration-500 group-hover:-translate-x-16 group-hover:-translate-y-12"></div>
+        
+        <!-- Small Illustration Card (Third layer, bottom-right offset) -->
+        <div class="absolute -bottom-20 -right-20 bg-surface-container-highest w-1/4 h-1/4 rounded-3xl outline outline-1 outline-white/10 p-6 flex flex-col shadow-2xl transition-all duration-300 opacity-80 group-hover:opacity-100 group-hover:scale-105">
+            <div class="flex gap-1.5 mb-4">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div class="w-16 h-2 bg-on-surface-variant/30 rounded-full mb-3"></div>
+            <div class="w-24 h-2 bg-on-surface-variant/30 rounded-full mb-2"></div>
+            <div class="w-20 h-2 bg-on-surface-variant/30 rounded-full mb-1"></div>
+        </div>
+    </div>
 
     <div class="space-y-32 px-8 max-w-7xl mx-auto">
         
@@ -91,7 +118,7 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 group">
-                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                    <div class="bg-surface-container-low p-8 rounded-2xl outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container shadow-xl">
                         <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
                             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
                         </div>
@@ -100,13 +127,13 @@
                     </div>
                 </div>
                 <div class="lg:col-span-1">
-                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded-2xl h-full flex flex-col items-center justify-center text-center outline outline-1 outline-white/5 shadow-xl">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-on-surface-variant/15">
                             <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-primary-fixed/15">COMING SOON</span>
                     </div>
                 </div>
             </div>
@@ -119,17 +146,17 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1 lg:order-1 order-2">
-                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded-2xl h-full flex flex-col items-center justify-center text-center outline outline-1 outline-white/5 shadow-xl">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-on-surface-variant/15">
                             <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-secondary/15">COMING SOON</span>
                     </div>
                 </div>
                 <div class="lg:col-span-2 lg:order-2 order-1 group">
-                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                    <div class="bg-surface-container-low p-8 rounded-2xl outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container shadow-xl">
                         <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
                             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
                         </div>
@@ -147,7 +174,7 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 group">
-                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                    <div class="bg-surface-container-low p-8 rounded-2xl outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container shadow-xl">
                         <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
                             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
                         </div>
@@ -156,13 +183,13 @@
                     </div>
                 </div>
                 <div class="lg:col-span-1">
-                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded-2xl h-full flex flex-col items-center justify-center text-center outline outline-1 outline-white/5 shadow-xl">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-on-surface-variant/15">
                             <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-primary-fixed/15">COMING SOON</span>
                     </div>
                 </div>
             </div>
@@ -175,17 +202,17 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1">
-                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                    <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded-2xl h-full flex flex-col items-center justify-center text-center outline outline-1 outline-white/5 shadow-xl">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-on-surface-variant/15">
                             <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-secondary/15">COMING SOON</span>
                     </div>
                 </div>
                 <div class="lg:col-span-2 group">
-                    <div class="bg-surface-container-low p-8 rounded- outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container">
+                    <div class="bg-surface-container-low p-8 rounded-2xl outline outline-1 outline-white/5 transition-all duration-300 hover:bg-surface-container shadow-xl">
                         <div class="aspect-video w-full rounded-xl overflow-hidden mb-8 outline outline-1 outline-white/10">
                             <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/qKjR80vW6v4"></iframe>
                         </div>
@@ -199,36 +226,29 @@
     </div>
 </main>
 
-<footer class="bg- full-width py-12 border-t border-white/5">
+<footer class="bg-surface w-full py-16 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
             <div class="text-lg font-bold text-white mb-2">The Intelligence Layer</div>
-            <p class="text- text-sm">© 2024 The Intelligence Layer. All rights reserved.</p>
+            <p class="text-on-surface-variant/60 text-sm">© 2024 The Intelligence Layer. All rights reserved.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-8 text-sm">
-            <a class="text- hover:text- transition-colors" href="#">Privacy Policy</a>
-            <a class="text- hover:text- transition-colors" href="#">Terms of Service</a>
-            <a class="text- hover:text- transition-colors" href="#">Contact Support</a>
+            <a class="text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="text-on-surface-variant hover:text-white transition-colors" href="#">Terms of Service</a>
+            <a class="text-on-surface-variant hover:text-white transition-colors" href="#">Contact Support</a>
         </div>
     </div>
 </footer>
 
-<!-- Request Demo Pop-up Modal -->
 <div id="demoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
-    <!-- Dark transparent backdrop that closes the modal when clicked -->
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="closeModal()"></div>
-    
-    <!-- Modal Content Box -->
-    <div class="relative bg-surface w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 m-4 flex flex-col transform scale-95 transition-transform duration-300" style="height: 85vh;" id="modalContent">
-        <!-- Header -->
+    <div class="relative bg-surface w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden border border-white/10 m-4 flex flex-col transform scale-95 transition-transform duration-300" style="height: 85vh;" id="modalContent">
         <div class="flex justify-between items-center p-6 bg-surface-container-high border-b border-white/5">
             <h3 class="text-2xl font-bold text-white tracking-tight">Request a Demo</h3>
             <button onclick="closeModal()" class="text-on-surface-variant hover:text-white transition-colors flex items-center justify-center p-2 rounded-full hover:bg-white/5">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>
-        
-        <!-- Iframe container -->
         <div class="flex-grow w-full bg-white overflow-hidden">
             <iframe 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSctyT4y7L2ItOihTHxSUU-OkM241YyR1-sx0wmN1U9tMCtdsA/viewform?embedded=true" 
@@ -242,17 +262,12 @@
     </div>
 </div>
 
-<!-- JavaScript to control the Modal -->
 <script>
     function openModal() {
         const modal = document.getElementById('demoModal');
         const modalContent = document.getElementById('modalContent');
-        
-        // Show modal and prevent background scrolling
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-        
-        // Slight delay to trigger the CSS transition for a smooth fade-in
         setTimeout(() => {
             modal.classList.remove('opacity-0');
             modalContent.classList.remove('scale-95');
@@ -262,12 +277,8 @@
     function closeModal() {
         const modal = document.getElementById('demoModal');
         const modalContent = document.getElementById('modalContent');
-        
-        // Trigger fade-out animation
         modal.classList.add('opacity-0');
         modalContent.classList.add('scale-95');
-        
-        // Wait for animation to finish before hiding completely and restoring scroll
         setTimeout(() => {
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
