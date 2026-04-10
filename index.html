@@ -59,19 +59,33 @@
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary relative">
 
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w- rounded-2xl bg-surface/70 backdrop-blur-3xl shadow- flex justify-between items-center px-8 py-4 z-50 transition-all duration-300 hover:bg-white/5">
-    <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">The Intelligence Layer</a>
-    <div class="hidden md:flex space-x-8">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w- max-w-7xl rounded-2xl bg-surface/80 backdrop-blur-3xl shadow- flex justify-between items-center px-6 md:px-8 py-4 z-50 transition-all duration-300 border border-white/5">
+    
+    <!-- Left: Logo -->
+    <div class="flex flex-1 justify-start">
+        <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors whitespace-nowrap">The Intelligence Layer</a>
+    </div>
+
+    <!-- Center: Links -->
+    <div class="hidden md:flex flex-none space-x-8 items-center justify-center">
         <a class="text-white font-medium hover:text-primary transition-colors" href="index.html">Home</a>
         <a class="text- hover:text-white transition-colors" href="#healthcare">Healthcare</a>
         <a class="text- hover:text-white transition-colors" href="#financial">Financial Services</a>
         <a class="text- hover:text-white transition-colors" href="#retail">Retail</a>
         <a class="text- hover:text-white transition-colors" href="#marketing">Marketing</a>
     </div>
-    <button onclick="openModal()" class="bg-primary text-on-primary font-medium px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 inline-block text-center cursor-pointer">Request Demo</button>
+
+    <!-- Right: Highlighted Button -->
+    <div class="flex flex-1 justify-end">
+        <button onclick="openModal()" class="bg-primary text-on-primary font-bold px-6 py-2.5 rounded-full hover:scale-105 hover:shadow- transition-all duration-300 shadow-md cursor-pointer tracking-wide">
+            Request Demo
+        </button>
+    </div>
 </nav>
 
 <main class="relative pt-32 pb-24 overflow-hidden">
+    <!-- Hero Section -->
     <section class="relative z-10 px-8 max-w-7xl mx-auto mb-32 flex flex-col items-start aura-bg py-20 rounded-">
         <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4">Gemini Enterprise Showcase</span>
         <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl">
@@ -84,6 +98,7 @@
 
     <div class="space-y-32 px-8 max-w-7xl mx-auto">
         
+        <!-- Healthcare -->
         <section class="scroll-mt-32" id="healthcare">
             <div class="flex items-center gap-4 mb-12">
                 <span class="material-symbols-outlined text-primary text-4xl" data-icon="medical_services">medical_services</span>
@@ -101,17 +116,18 @@
                 </div>
                 <div class="lg:col-span-1">
                     <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-white/15">
                             <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-white/15">COMING SOON</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Financial Services -->
         <section class="scroll-mt-32" id="financial">
             <div class="flex items-center gap-4 mb-12">
                 <span class="material-symbols-outlined text-secondary text-4xl" data-icon="account_balance">account_balance</span>
@@ -120,12 +136,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1 lg:order-1 order-2">
                     <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-white/15">
                             <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-white/15">COMING SOON</span>
                     </div>
                 </div>
                 <div class="lg:col-span-2 lg:order-2 order-1 group">
@@ -140,6 +156,7 @@
             </div>
         </section>
 
+        <!-- Retail -->
         <section class="scroll-mt-32" id="retail">
             <div class="flex items-center gap-4 mb-12">
                 <span class="material-symbols-outlined text-primary text-4xl" data-icon="shopping_bag">shopping_bag</span>
@@ -157,17 +174,18 @@
                 </div>
                 <div class="lg:col-span-1">
                     <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-white/15">
                             <span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-primary-fixed text-xs font-bold rounded-full outline outline-1 outline-white/15">COMING SOON</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Marketing -->
         <section class="scroll-mt-32" id="marketing">
             <div class="flex items-center gap-4 mb-12">
                 <span class="material-symbols-outlined text-secondary text-4xl" data-icon="campaign">campaign</span>
@@ -176,12 +194,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1">
                     <div class="bg-surface-container-high/50 backdrop-blur p-8 rounded- h-full flex flex-col items-center justify-center text-center">
-                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-/15">
+                        <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 outline outline-1 outline-white/15">
                             <span class="material-symbols-outlined text-secondary" data-icon="folder_open">folder_open</span>
                         </div>
                         <h4 class="text-white font-bold text-xl mb-2">Additional Resources</h4>
                         <p class="text-on-surface-variant text-sm mb-6">Industry-specific documentation, whitepapers, and toolkits are currently being finalized.</p>
-                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-/15">COMING SOON</span>
+                        <span class="px-4 py-1 bg-surface-container-highest text-secondary text-xs font-bold rounded-full outline outline-1 outline-white/15">COMING SOON</span>
                     </div>
                 </div>
                 <div class="lg:col-span-2 group">
@@ -199,16 +217,16 @@
     </div>
 </main>
 
-<footer class="bg- full-width py-12 border-t border-white/5">
+<footer class="bg- w-full py-12 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
             <div class="text-lg font-bold text-white mb-2">The Intelligence Layer</div>
-            <p class="text- text-sm">© 2024 The Intelligence Layer. All rights reserved.</p>
+            <p class="text- text-sm">© 2026 The Intelligence Layer. All rights reserved.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-8 text-sm">
-            <a class="text- hover:text- transition-colors" href="#">Privacy Policy</a>
-            <a class="text- hover:text- transition-colors" href="#">Terms of Service</a>
-            <a class="text- hover:text- transition-colors" href="#">Contact Support</a>
+            <a class="text- hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="text- hover:text-white transition-colors" href="#">Terms of Service</a>
+            <a class="text- hover:text-white transition-colors" href="#">Contact Support</a>
         </div>
     </div>
 </footer>
