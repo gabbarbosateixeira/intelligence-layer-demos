@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>The Intelligence Layer | Gemini Enterprise Video Demos</title>
+    <title>The Intelligence Layer | Enterprise Video Demos</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -59,7 +59,6 @@
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary relative">
 
-<!-- TopNavBar -->
 <nav class="fixed top-4 left-1/2 -translate-x-1/2 w- rounded-2xl bg-surface/70 backdrop-blur-3xl shadow- flex justify-between items-center px-8 py-4 z-50 transition-all duration-300 hover:bg-white/5">
     <a href="index.html" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">The Intelligence Layer</a>
     <div class="hidden md:flex space-x-8">
@@ -69,7 +68,6 @@
         <a class="text- hover:text-white transition-colors" href="#retail">Retail</a>
         <a class="text- hover:text-white transition-colors" href="#marketing">Marketing</a>
     </div>
-    <!-- Changed from an 'a' tag to a button that triggers the openModal() function -->
     <button onclick="openModal()" class="bg-primary text-on-primary font-medium px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 inline-block text-center cursor-pointer">Request Demo</button>
 </nav>
 
@@ -205,7 +203,7 @@
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
             <div class="text-lg font-bold text-white mb-2">The Intelligence Layer</div>
-            <p class="text- text-sm">© 2026 The Intelligence Layer. All rights reserved.</p>
+            <p class="text- text-sm">© 2024 The Intelligence Layer. All rights reserved.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-8 text-sm">
             <a class="text- hover:text- transition-colors" href="#">Privacy Policy</a>
@@ -216,12 +214,12 @@
 </footer>
 
 <!-- Request Demo Pop-up Modal -->
-<div id="demoModal" class="fixed inset-0 z- hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div id="demoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
     <!-- Dark transparent backdrop that closes the modal when clicked -->
-    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer" onclick="closeModal()"></div>
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer" onclick="closeModal()"></div>
     
     <!-- Modal Content Box -->
-    <div class="relative bg- w-full max-w-4xl rounded- shadow-2xl overflow-hidden border border-white/10 m-4 flex flex-col transform scale-95 transition-transform duration-300" style="height: 85vh;" id="modalContent">
+    <div class="relative bg-surface w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 m-4 flex flex-col transform scale-95 transition-transform duration-300" style="height: 85vh;" id="modalContent">
         <!-- Header -->
         <div class="flex justify-between items-center p-6 bg-surface-container-high border-b border-white/5">
             <h3 class="text-2xl font-bold text-white tracking-tight">Request a Demo</h3>
@@ -230,9 +228,8 @@
             </button>
         </div>
         
-        <!-- Iframe container (white background helps the Google Form blend cleanly) -->
+        <!-- Iframe container -->
         <div class="flex-grow w-full bg-white overflow-hidden">
-            <!-- Appended 'embedded=true' to the URL so Google formats it cleanly for an iframe -->
             <iframe 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSctyT4y7L2ItOihTHxSUU-OkM241YyR1-sx0wmN1U9tMCtdsA/viewform?embedded=true" 
                 width="100%" 
